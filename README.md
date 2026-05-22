@@ -26,7 +26,7 @@ AI is increasingly central to daily life, yet its internal structure remains opa
 
 ## Current data seed
 
-The initial model database lives at `/tmp/workspace/driver727-pixel/Ai-self-portrait/data/ai-model-catalog.md`.
+The initial model database lives at `data/ai-model-catalog.md`.
 It groups live commercial model families by company, keeps open-source/open-weight families in a separate section, and captures:
 
 - community or user-authored descriptions
