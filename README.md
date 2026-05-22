@@ -19,8 +19,20 @@ AI is increasingly central to daily life, yet its internal structure remains opa
 
 - [ ] Core 3D rendering engine with node-graph layout
 - [ ] Model parameter ingestion pipeline
+- [x] Seed AI model catalog with live family descriptions, training-data notes, and official docs
 - [ ] Organization-specific visual theming system
 - [ ] Live sync with model registries (Hugging Face, etc.)
 - [ ] Public web deployment
+
+## Current data seed
+
+The initial model database lives at `/tmp/workspace/driver727-pixel/Ai-self-portrait/data/ai-model-catalog.md`.
+It groups live commercial model families by company, keeps open-source/open-weight families in a separate section, and captures:
+
+- community or user-authored descriptions
+- public training-data notes
+- official documentation links
+
+This seed catalog is meant to be the first input layer for the future visualizer.
 
 Bridging the gap between AI complexity and human understanding — one node at a time.
