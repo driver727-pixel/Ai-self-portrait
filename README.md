@@ -35,6 +35,18 @@ The focus is education through visual experience, not technical overload.
 - [ ] Side-by-side comparison mode for similar models and model families
 - [ ] Shareable views for screenshots, links, and social posts
 - [ ] Data pipeline for keeping model information current
+- [x] Seed AI model catalog with live family descriptions, training-data notes, and official docs
 - [ ] Public web deployment
+
+## Current data seed
+
+The initial model database lives at `data/ai-model-catalog.md`.
+It groups live commercial model families by company, keeps open-source/open-weight families in a separate section, and captures:
+
+- community or user-authored descriptions
+- public training-data notes
+- official documentation links
+
+This seed catalog is meant to be the first input layer for the future visualizer.
 
 Making AI models visible, memorable, and shareable — one 3D self-portrait at a time.
