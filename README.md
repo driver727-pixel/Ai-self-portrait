@@ -1,27 +1,41 @@
-# 3D AI Architecture Visualizer
+# AI Self-Portrait
 
-An interactive 3D visualization tool that maps the structural anatomy of AI models as living, explorable trees — where every node represents a real parameter, and scale reflects reality.
+A visual-first gallery for exploring AI models as expressive 3D forms.
 
 ## What it does
 
-Most people have no mental model of what an AI actually looks like under the hood. This project makes that concrete. Each AI architecture is rendered as a 3D node tree where:
+Most AI education tools focus on technical diagrams, settings, and research details. This project is different: it is designed for people who want to see how AI models feel visually, compare them at a glance, and share those visuals online.
 
-- **Size = scale** — models with more parameters grow larger and more structurally complex.
-- **Shape = structure** — architectural differences (transformers, CNNs, MoEs, etc.) produce distinct morphologies.
-- **Identity = style** — models from different organizations carry unique color themes and visual signatures.
-- **Data = live** — the repository continuously syncs with current model specs, staying up to date as the AI landscape evolves.
+Each model becomes its own 3D "self-portrait" with a distinct personality:
+
+- **Color = identity** — model families and creators can have recognizable visual signatures.
+- **Size = presence** — larger or more capable models can feel more massive, dense, or dramatic.
+- **Shape = character** — different architectures and behaviors can produce different silhouettes and structures.
+- **Motion = mood** — animation can help each model feel alive instead of static.
+- **Shareability = purpose** — visuals should be easy to capture, compare, and post online.
 
 ## Why it exists
 
-AI is increasingly central to daily life, yet its internal structure remains opaque to most people. This tool is built for the general public — no ML background required. The goal is to replace vague intuitions about "neural networks" with something you can actually see, rotate, and explore.
+AI models are becoming cultural objects, but most people only experience them through text boxes and technical charts. The goal of this project is to make modern models visually memorable for the general public — no machine learning background required.
+
+Instead of asking users to study parameters, loss curves, or activation functions, this site should help them ask visual questions:
+
+- What makes ChatGPT 5.4 look different from ChatGPT 5.5?
+- How does Codex feel compared with Opus?
+- What does a small, fast model look like next to a huge, powerful one?
+- Which models feel elegant, chaotic, dense, bright, strange, or alive?
+
+The focus is education through visual experience, not technical overload.
 
 ## Roadmap
 
-- [ ] Core 3D rendering engine with node-graph layout
-- [ ] Model parameter ingestion pipeline
+- [ ] Core 3D rendering engine for model portraits
+- [ ] Visual personality system using color, size, shape, density, and motion
+- [ ] Model gallery covering many current AI systems
+- [ ] Side-by-side comparison mode for similar models and model families
+- [ ] Shareable views for screenshots, links, and social posts
+- [ ] Data pipeline for keeping model information current
 - [x] Seed AI model catalog with live family descriptions, training-data notes, and official docs
-- [ ] Organization-specific visual theming system
-- [ ] Live sync with model registries (Hugging Face, etc.)
 - [ ] Public web deployment
 
 ## Current data seed
@@ -35,4 +49,4 @@ It groups live commercial model families by company, keeps open-source/open-weig
 
 This seed catalog is meant to be the first input layer for the future visualizer.
 
-Bridging the gap between AI complexity and human understanding — one node at a time.
+Making AI models visible, memorable, and shareable — one 3D self-portrait at a time.
