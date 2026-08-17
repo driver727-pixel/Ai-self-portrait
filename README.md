@@ -93,6 +93,22 @@ npm run preview     # Preview locally
 npm run dev         # Dev server with hot reload
 ```
 
+#### Quick local preview (no public URL needed)
+
+If you do not have a deployed URL yet, run this from the repository root:
+
+```bash
+npm run preview:blogs
+```
+
+This will generate a post and start the site locally at:
+
+```text
+http://localhost:4321
+```
+
+For real auto-generated content, run `npm run pipeline` first, then `npm run site:dev`.
+
 ### GitHub Actions
 
 The workflow at `.github/workflows/auto-publish.yml` runs automatically every **6 hours** (4× daily).
@@ -189,4 +205,3 @@ The initial model database lives at `data/ai-model-catalog.md`.
 ---
 
 *Opinions expressed are original commentary only and do not reflect the views of any referenced artists, filmmakers, authors, or organizations. This is cultural criticism and commentary.*
-

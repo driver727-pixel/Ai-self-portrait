@@ -8,7 +8,9 @@
     "filter": "node --experimental-strip-types scripts/filter.ts",
     "summarize": "node --experimental-strip-types scripts/summarize.ts",
     "meme": "node --experimental-strip-types scripts/meme.ts",
-    "publish": "node --experimental-strip-types scripts/publish.ts"
+    "publish": "node --experimental-strip-types scripts/publish.ts",
+    "site:dev": "npm --prefix site run dev -- --host 0.0.0.0 --port 4321",
+    "preview:blogs": "npm run publish && npm run site:dev"
   },
   "dependencies": {}
 }
