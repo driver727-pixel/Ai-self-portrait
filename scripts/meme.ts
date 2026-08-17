@@ -89,7 +89,7 @@ export async function generateMeme(
     const imageUrl = data?.data?.[0]?.url;
     if (!imageUrl) throw new Error('No image URL in response');
 
-    // Download and save image
+    // Download and save image with proper backpressure handling
     const imgRes = await fetch(imageUrl, { signal: AbortSignal.timeout(20_000) });
     if (!imgRes.ok || !imgRes.body) throw new Error(`Image download failed: ${imgRes.status}`);
 
@@ -103,9 +103,13 @@ export async function generateMeme(
           while (true) {
             const { done, value } = await reader.read();
             if (done) { writer.end(); break; }
-            writer.write(value);
+            // Respect backpressure: wait for drain if buffer is full
+            const ok = writer.write(value);
+            if (!ok) {
+              await new Promise<void>(res => writer.once('drain', res));
+            }
           }
-        } catch (e) { reject(e); }
+        } catch (e) { writer.destroy(e as Error); reject(e); }
       })();
     });
 

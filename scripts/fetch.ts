@@ -36,7 +36,8 @@ async function parseFeed(url: string): Promise<RawEntry[]> {
 
   // Minimal XML parser using regex — avoids heavy deps
   // Supports both RSS <item> and Atom <entry> formats
-  const itemPattern = /<(item|entry)[\s\S]*?<\/(item|entry)>/gi;
+  // Uses backreference \1 to enforce matching open/close tags
+  const itemPattern = /<(item|entry)[\s\S]*?<\/\1>/gi;
   let match;
   while ((match = itemPattern.exec(xml)) !== null) {
     const block = match[0];
