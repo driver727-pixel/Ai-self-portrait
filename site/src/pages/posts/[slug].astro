@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{post.data.title} — AI Risk Blog</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #0f0f0f; color: #e8e8e8; max-width: 720px; margin: 0 auto; padding: 1rem 1.5rem; }
+    header { padding: 1rem 0; }
+    header a { color: #666; font-size: .85rem; text-decoration: none; }
+    header a:hover { color: #aaa; }
+    h1 { font-size: 1.5rem; color: #ff8888; margin: 1.2rem 0 .4rem; }
+    .meta { font-size: .8rem; color: #666; margin-bottom: .8rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: 1rem; }
+    .tag { font-size: .7rem; background: #2a2a2a; color: #aaa; border-radius: 4px; padding: .15rem .45rem; }
+    .meme { margin: 1.5rem 0; text-align: center; }
+    .meme img { max-width: 100%; border-radius: 8px; border: 1px solid #333; }
+    .meme-caption { font-size: .8rem; color: #888; margin-top: .5rem; font-style: italic; }
+    .content { line-height: 1.7; color: #ccc; }
+    .source-link { margin-top: 1.5rem; font-size: .8rem; color: #555; }
+    .source-link a { color: #666; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333; font-size: .75rem; color: #555; }
+  </style>
+</head>
+<body>
+  <header><a href="/">← Back to feed</a></header>
+  <h1>{post.data.title}</h1>
+  <div class="meta">
+    {new Date(post.data.date).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })}
+  </div>
+  <div class="tags">{post.data.tags.map((t: string) => <span class="tag">#{t}</span>)}</div>
+  {post.data.memeImage && (
+    <div class="meme">
+      <img src={post.data.memeImage} alt={post.data.memeCaption ?? 'meme'} loading="lazy" />
+      {post.data.memeCaption && <p class="meme-caption">{post.data.memeCaption}</p>}
+    </div>
+  )}
+  <div class="content"><Content /></div>
+  <p class="source-link">Source: <a href={post.data.sourceUrl} target="_blank" rel="noopener noreferrer">{post.data.sourceUrl}</a></p>
+  <footer>
+    <p>Content is original commentary/paraphrase only. No copyrighted lyrics or dialogue reproduced.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Risk Cultural Blog</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #0f0f0f; color: #e8e8e8; max-width: 720px; margin: 0 auto; padding: 1rem 1.5rem; }
+    header { padding: 2rem 0 1.5rem; border-bottom: 1px solid #333; margin-bottom: 2rem; }
+    h1 { font-size: 1.6rem; color: #ff4444; }
+    p.tagline { color: #aaa; margin-top: .4rem; font-size: .9rem; }
+    .posts { display: flex; flex-direction: column; gap: 1.5rem; }
+    .card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 8px; padding: 1rem 1.2rem; }
+    .card h2 { font-size: 1.05rem; }
+    .card h2 a { color: #ff8888; text-decoration: none; }
+    .card h2 a:hover { text-decoration: underline; }
+    .meta { font-size: .75rem; color: #666; margin: .3rem 0 .6rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .3rem; }
+    .tag { font-size: .7rem; background: #2a2a2a; color: #aaa; border-radius: 4px; padding: .15rem .45rem; }
+    .summary { font-size: .85rem; color: #bbb; margin-top: .5rem; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333; font-size: .75rem; color: #555; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🤖 AI Risk: Cultural Signals</h1>
+    <p class="tagline">Art, music, and cinema as mirrors of artificial intelligence's dangers — auto-curated daily.</p>
+  </header>
+  <main class="posts">
+    {posts.length === 0 && <p style="color:#666">No posts yet. Run the pipeline to generate content.</p>}
+    {posts.map(post => (
+      <article class="card">
+        <h2><a href={`/posts/${post.slug}`}>{post.data.title}</a></h2>
+        <div class="meta">{new Date(post.data.date).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })} &middot; <a href={post.data.sourceUrl} target="_blank" rel="noopener noreferrer" style="color:#666">{new URL(post.data.sourceUrl).hostname}</a></div>
+        <div class="tags">{post.data.tags.map((t: string) => <span class="tag">#{t}</span>)}</div>
+        <p class="summary">{post.data.summary}</p>
+      </article>
+    ))}
+  </main>
+  <footer>
+    <p>Content is original commentary/paraphrase only. No copyrighted lyrics or dialogue reproduced. See <a href="https://github.com/driver727-pixel/Ai-self-portrait" style="color:#555">README</a> for rights policy.</p>
+  </footer>
+</body>
+</html>
