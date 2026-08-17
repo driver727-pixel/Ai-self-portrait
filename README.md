@@ -101,13 +101,13 @@ If you do not have a deployed URL yet, run this from the repository root:
 npm run preview:blogs
 ```
 
-This will generate a post and start the site locally at:
+This runs the content pipeline and then starts the local site at:
 
 ```text
 http://localhost:4321
 ```
 
-For real auto-generated content, run `npm run pipeline` first, then `npm run site:dev`.
+If you already have generated posts and only want the server, use `npm run site:dev`.
 
 ### GitHub Actions
 
