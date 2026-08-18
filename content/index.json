@@ -69,7 +69,28 @@
       "publishedAt": "2026-08-18T12:04:47.545Z",
       "title": "Anatomy of an AI Kill Chain with Airwars",
       "sourceUrl": "https://ainowinstitute.org/publications/anatomy-of-an-ai-kill-chain"
+    },
+    {
+      "slug": "2026-08-18-the-download-how-people-really-use-ai-and-flock821",
+      "urlHash": "782f21dacaaae274",
+      "publishedAt": "2026-08-18T18:05:19.750Z",
+      "title": "The Download: how people really use AI, and Flock&#8217;s design choices",
+      "sourceUrl": "https://www.technologyreview.com/2026/08/18/1142229/the-download-how-people-use-ai-flock-cameras-design/"
+    },
+    {
+      "slug": "2026-07-08-friendly-fire-hijacking-defensive-cyber-ai-agents",
+      "urlHash": "8ff098c01a085702",
+      "publishedAt": "2026-08-18T18:05:19.751Z",
+      "title": "Friendly Fire: Hijacking Defensive Cyber AI Agents for Remote Code Execution",
+      "sourceUrl": "https://ainowinstitute.org/publications/friendly-fire-exploit-brief"
+    },
+    {
+      "slug": "2026-07-08-policy-brief-friendly-fire",
+      "urlHash": "012e9b28e233ae20",
+      "publishedAt": "2026-08-18T18:05:19.751Z",
+      "title": "Policy Brief: Friendly Fire",
+      "sourceUrl": "https://ainowinstitute.org/publications/friendly-fire-policy-brief"
     }
   ],
-  "lastUpdated": "2026-08-18T12:04:47.545Z"
+  "lastUpdated": "2026-08-18T18:05:19.751Z"
 }
