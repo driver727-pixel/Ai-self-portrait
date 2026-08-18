@@ -48,7 +48,28 @@
       "publishedAt": "2026-08-18T06:05:05.794Z",
       "title": "The Download: Flock&#8217;s new rules, cloning&#8217;s future, and children&#8217;s cells",
       "sourceUrl": "https://www.technologyreview.com/2026/08/14/1142033/the-download-flock-new-rules-cloning-future/"
+    },
+    {
+      "slug": "2026-08-18-we-still-dont-know-how-people-are-really-using-ai",
+      "urlHash": "3a15a6a18265ecce",
+      "publishedAt": "2026-08-18T12:04:47.544Z",
+      "title": "We still don’t know how people are really using AI",
+      "sourceUrl": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/"
+    },
+    {
+      "slug": "2026-08-18-ais-recursive-self-improvement-might-not-come-so-q",
+      "urlHash": "798b4a264698a3ff",
+      "publishedAt": "2026-08-18T12:04:47.545Z",
+      "title": "AI’s recursive self-improvement might not come so quickly after all",
+      "sourceUrl": "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/"
+    },
+    {
+      "slug": "2026-07-28-anatomy-of-an-ai-kill-chain-with-airwars",
+      "urlHash": "ebd40ffc91f91030",
+      "publishedAt": "2026-08-18T12:04:47.545Z",
+      "title": "Anatomy of an AI Kill Chain with Airwars",
+      "sourceUrl": "https://ainowinstitute.org/publications/anatomy-of-an-ai-kill-chain"
     }
   ],
-  "lastUpdated": "2026-08-18T06:05:05.794Z"
+  "lastUpdated": "2026-08-18T12:04:47.545Z"
 }
