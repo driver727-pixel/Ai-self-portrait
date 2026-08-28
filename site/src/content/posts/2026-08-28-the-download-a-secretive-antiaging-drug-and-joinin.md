@@ -1,0 +1,17 @@
+---
+title: "The Download: a secretive antiaging drug and joining virtual power plants"
+date: "2026-08-28T12:35:27.000Z"
+sourceUrl: "https://www.technologyreview.com/2026/08/28/1143113/the-download-antiaging-drug-joining-virtual-power-plants/"
+tags:
+  - "ai-risk"
+  - "agi"
+summary: "This piece from www.technologyreview.com touches on themes of agi — a recurring cultural conversation about how artificial intelligence intersects with human autonomy, safety, and the fabric of society. The work explores: \"This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. A startup claims it’s found a drug to make your bl...\" (original commentary; no copyrighted text reproduced)."
+memeImage: "/assets/memes/placeholder.png"
+memeCaption: "When agi meets reality: The Download: a secretive antiaging drug and joining virtual"
+---
+
+This piece from www.technologyreview.com touches on themes of agi — a recurring cultural conversation about how artificial intelligence intersects with human autonomy, safety, and the fabric of society. The work explores: "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. A startup claims it’s found a drug to make your bl..." (original commentary; no copyrighted text reproduced).
+
+*This is original commentary and paraphrase only. No copyrighted lyrics, movie dialogue, or substantial plot text is reproduced. All analysis is the author's own.*
+
+**Source:** [www.technologyreview.com](https://www.technologyreview.com/2026/08/28/1143113/the-download-antiaging-drug-joining-virtual-power-plants/)
